@@ -1,0 +1,35 @@
+.intro-box-animation {
+    animation: intro-slide-in 1s cubic-bezier(.86, 0, .07, 1) 0.2s forwards;
+    opacity: 0;
+    overflow: hidden;
+
+    .container {
+        animation: container-slide-in 1s cubic-bezier(.18, .89, .32, 1.28) 1.2s forwards;
+        opacity: 0;
+    }
+}
+
+
+@keyframes intro-slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes container-slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(33%);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

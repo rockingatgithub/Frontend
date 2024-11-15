@@ -1,0 +1,75 @@
+@import "../abstract";
+@import "../variables";
+
+.leadership {
+    display: flex;
+    font-family: $body-regular;
+    margin-top: 3rem;
+
+    .img-section {
+        align-items: center;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+
+        .img {
+            position: relative;
+            height: px2rem(300);
+            width: px2rem(300);
+        }
+
+        .titles {
+            font-family: $body-bold;
+            margin-top: 2rem;
+            padding: 1rem 1.5rem;
+            text-align: center;
+            width: px2rem(500);
+        }
+    }
+
+    .about-leader-section {
+        flex: 1;
+
+        .slide {
+            align-items: center;
+            background: #eee;
+            display: flex;
+            height: 16rem;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+    }
+}
+
+.event-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    .img {
+        height: 100%;
+        object-fit: contain;
+        max-height: 25rem;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: $tablet-screen) {
+
+    .col-on-small {
+        flex-direction: column !important;
+    }
+
+    .leadership {
+        flex-direction: column;
+    }
+
+    .about-leader-section {
+        padding: 2rem 1rem;
+
+        .heading-bold {
+            text-align: center;
+        }
+    }
+}

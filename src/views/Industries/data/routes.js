@@ -1,0 +1,35 @@
+import { INDUSTRIES } from "@/scripts/constants/routes";
+
+export const INDUSTRIES_ROUTE = INDUSTRIES;
+
+export const DEFENCE_ROUTE = `${INDUSTRIES_ROUTE}/0`;
+export const FINANCE_ROUTE = `${INDUSTRIES_ROUTE}/1`;
+export const HEALTHCARE_ROUTE = `${INDUSTRIES_ROUTE}/2`;
+export const MANUFACTURING_ROUTE = `${INDUSTRIES_ROUTE}/3`;
+export const TRANSPORTATION_ROUTE = `${INDUSTRIES_ROUTE}/4`;
+export const POWER_AND_ENERGY_ROUTE = `${INDUSTRIES_ROUTE}/5`;
+export const OIL_AND_GAS_ROUTE = `${INDUSTRIES_ROUTE}/6`;
+export const AEROSPACE_ROUTE = `${INDUSTRIES_ROUTE}/7`;
+export const PHARMA_ROUTE = `${INDUSTRIES_ROUTE}/8`;
+export const AUTOMOTIVE_ROUTE = `${INDUSTRIES_ROUTE}/9`;
+export const MINING_ROUTE = `${INDUSTRIES_ROUTE}/10`;
+export const CYBER_SECURITY_ROUTE = `${INDUSTRIES_ROUTE}/11`;
+export const NOT_AVAILABLE_ROUTE = `${INDUSTRIES_ROUTE}/404`;
+
+// This is to check whether we have the data for the requested
+// url or not.
+
+export const LIST_OF_AVAILABLE_ROUTES = [
+    DEFENCE_ROUTE,
+    // FINANCE_ROUTE,
+    HEALTHCARE_ROUTE,
+    MANUFACTURING_ROUTE,
+    // TRANSPORTATION_ROUTE,
+    POWER_AND_ENERGY_ROUTE,
+    OIL_AND_GAS_ROUTE,
+    AEROSPACE_ROUTE,
+    // PHARMA_ROUTE,
+    AUTOMOTIVE_ROUTE,
+    MINING_ROUTE,
+    // CYBER_SECURITY_ROUTE,
+];

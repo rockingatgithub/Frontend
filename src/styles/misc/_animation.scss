@@ -1,0 +1,220 @@
+/**
+ * @author Ankit Kumar <hello@ankdev.me> (https://ankdev.me)
+ */
+
+.delay-100 {
+    opacity: 0;
+    animation-delay: 0.35s !important;
+}
+
+.delay-250 {
+    opacity: 0;
+    animation-delay: 0.7s !important;
+}
+
+.delay-350 {
+    opacity: 0;
+    animation-delay: 1s !important;
+}
+
+.pop-out-enter-active,
+.pop-out-leave-active {
+    transition: all 0.5s;
+}
+
+.pop-out-enter,
+.pop-out-leave-active {
+    opacity: 0;
+    transform: translateY(1.5rem);
+}
+
+
+.slide-in-animation {
+    animation: slide-in 1s ease-in-out 1 forwards;
+}
+
+.slide-in-right-animation {
+    animation: slide-in-right 1s ease-in-out 1 forwards;
+}
+
+.zoom-in-animation {
+    animation: zoom-in 1s cubic-bezier(1, .04, .27, 1.55) 1 forwards;
+}
+
+.wiggle-animation {
+    animation: wiggle 1s ease-in infinite;
+}
+
+.hover-wiggle:hover {
+    animation: wiggle 1s ease-in infinite;
+}
+
+.shake-animation {
+    animation: shake 2s infinite;
+}
+
+.shake-up-animation {
+    animation: shake-up 2s infinite;
+}
+
+@keyframes shake-up {
+
+    0%,
+    50%,
+    100% {
+        transform: translateY(0);
+    }
+
+    10%,
+    30% {
+        transform: translateY(-0.5rem);
+    }
+
+    20%,
+    40% {
+        transform: translateY(0.5rem);
+    }
+}
+
+
+@keyframes shake {
+
+    0%,
+    50%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30% {
+        transform: translateX(-0.5rem);
+    }
+
+    20%,
+    40% {
+        transform: translateX(0.5rem);
+    }
+}
+
+
+@keyframes zoom-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-6rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        opacity: 0;
+        transform: translateX(6rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(100vw, 0);
+    }
+
+    100% {
+        transform: translate(-120%, 0);
+    }
+}
+
+@keyframes wiggle {
+    0% {
+        transform: skewX(9deg);
+    }
+
+    10% {
+        transform: skewX(-8deg);
+    }
+
+    20% {
+        transform: skewX(7deg);
+    }
+
+    30% {
+        transform: skewX(-6deg);
+    }
+
+    40% {
+        transform: skewX(5deg);
+    }
+
+    50% {
+        transform: skewX(-4deg);
+    }
+
+    60% {
+        transform: skewX(3deg);
+    }
+
+    70% {
+        transform: skewX(-2deg);
+    }
+
+    80% {
+        transform: skewX(1deg);
+    }
+
+    90% {
+        transform: skewX(0deg);
+    }
+
+    100% {
+        transform: skewX(0deg);
+    }
+}
+
+
+@keyframes swing {
+
+    0%,
+    71%,
+    100% {
+        transform: rotate(0);
+    }
+
+    10% {
+        transform: rotate(15deg);
+    }
+
+    30% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    70% {
+        transform: rotate(-5deg);
+    }
+}
+
+.swing-animation-hover:hover {
+    animation: swing 1.5s infinite;
+}

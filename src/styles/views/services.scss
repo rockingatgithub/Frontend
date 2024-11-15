@@ -1,0 +1,213 @@
+@import "../abstract";
+@import "../variables";
+
+
+.ai-logo-container {
+    height: 2rem;
+    margin: 0 1rem 1rem 0;
+
+    img {
+        height: 100%;
+    }
+}
+
+
+.iot-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    position: relative;
+
+    .iot-img {
+        max-width: 25rem;
+        width: 100%;
+        transition: 0.3s;
+        transition-delay: 0.1s;
+
+    }
+
+    .p {
+        position: absolute;
+        max-width: 15rem;
+        opacity: 0;
+        transition: 0.3s;
+
+        &.right {
+            right: 0;
+        }
+
+        &.left {
+            left: 0
+        }
+    }
+
+    &:hover .iot-img {
+        &.left {
+            transform: translateX(1rem);
+        }
+
+        &.right {
+            transform: translateX(-1rem);
+        }
+    }
+
+    &:hover .p {
+        opacity: 1;
+
+        &.right {
+            transform: translateX(-1rem);
+        }
+
+        &.left {
+            transform: translateX(1rem);
+        }
+    }
+}
+
+.embedded {
+
+    font-family: $body-regular;
+
+    .heading {
+        font-family: $heading-bold;
+    }
+
+    .flex-1 {
+        max-width: 50%;
+    }
+
+    .wrapper {
+        display: flex;
+
+        .ul {
+            list-style: disc;
+            margin: 0.8rem;
+        }
+    }
+
+    .container {
+        padding: 2rem;
+
+        &.concept {
+            background: #007bff;
+            color: #fff;
+        }
+
+        &.design {
+            background: #f9d56e;
+            color: #000;
+        }
+
+        &.manufacture {
+            background: #001628;
+            color: #fff;
+        }
+
+        &.maintenance {
+            background: #76ead7;
+            color: #000;
+        }
+    }
+
+}
+
+.light-background {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+}
+
+.list-col-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.list-col-sm {
+    flex: 1;
+    min-width: 40%;
+    margin: 1rem;
+}
+
+@media screen and (max-width: $mobile-screen) {
+    .embedded {
+        .flex-1 {
+            max-width: 100% !important;
+        }
+    }
+
+    .col-sm {
+        flex-direction: column;
+    }
+}
+
+.chart-title {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 20rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: $heading-bold;
+}
+
+@media screen and (max-width: $mobile-screen) {
+    .chart-title {
+        top: -2rem;
+    }
+}
+
+@media screen and (max-width: $tablet-screen) {
+
+    .chart-title {
+        font-size: 1rem;
+        width: 15rem;
+    }
+
+    .iot-container {
+        flex-direction: column;
+
+        .p {
+            opacity: 1;
+            position: relative;
+
+        }
+
+        &:hover .p.left,
+        &:hover .p.right,
+        &:hover .iot-img.left,
+        &:hover .iot-img.right {
+            transform: translateX(0);
+        }
+    }
+
+    .list-col-wrapper {
+        flex-direction: column;
+    }
+
+    .embedded {
+        flex-direction: column;
+        align-items: center;
+
+        .wrapper {
+            display: block;
+
+            .ul {
+                margin: 0 0.8rem;
+            }
+        }
+
+        .flex-1 {
+            max-width: 60%
+        }
+
+        img {
+            order: 1;
+        }
+
+        .container {
+            order: 2;
+        }
+    }
+}
